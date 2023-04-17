@@ -51,7 +51,7 @@ export default function Idrovolante() {
                 </Paper>
                 <br /><br />
                 <Button width="100%" href="..">
-                    Torna alla Home
+                    Torna alla Home!
                 </Button>
             </Container>
 
