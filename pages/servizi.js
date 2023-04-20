@@ -77,7 +77,7 @@ export default function Home() {
                 btncamere="Camere"
                 btnservizi="Servizi"
             />
-            <MyCarousel slides={slides} />
+           
             <Products
                 title="I nostri servizi"
                 description="Grazie ai nostri servizi vivi a pieno l'esperienza del nostro hotel"
