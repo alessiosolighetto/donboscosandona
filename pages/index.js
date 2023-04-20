@@ -20,7 +20,7 @@ import Maps from '/components/Maps'
 import Navbar from "@/components/NavBar"
 import MyCarousel from "@/components/Carousel"
 import { margin } from "@mui/system"
-import googleFonts from 'google-fonts'
+
 
 
 let slides = [

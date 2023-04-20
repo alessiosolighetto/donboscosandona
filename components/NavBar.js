@@ -155,7 +155,7 @@ function ResponsiveAppBar() {
                 <MenuItem  onClick={handleCloseUserMenu}>
                   <ButtonGroup variant='' sx={{ border: "0px" }}>
                     <Button href='/account'>Account</Button>
-                    <Button href='/'>DashBoard</Button>
+                    <Button href='/paginaprenotazione'>Prenota</Button>
                     <Button href='/'>Logout</Button>
                   </ButtonGroup>
                 </MenuItem>
