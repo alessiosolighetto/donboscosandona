@@ -55,7 +55,7 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                                                     pr: { md: 0 },
                                                 }}
                                             >
-                                                <Typography component="h2" variant="h3" color="inherit" gutterBottom>
+                                                <Typography variant="h2" color="inherit" gutterBottom>
                                                     {slide.titolo}
                                                 </Typography>
                                                 <Typography component="h5" color="inherit" paragraph>

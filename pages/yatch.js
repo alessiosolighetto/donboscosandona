@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout"
 import { Button } from "@mui/material"
 import Typography from "@mui/material/Typography"
+import Navbar from "@/components/NavBar"
 import Container from "@mui/material/Container"
 import Paper from "@mui/material/Paper"
 
@@ -8,6 +9,12 @@ import Paper from "@mui/material/Paper"
 export default function Yatch() {
     return (
         <Layout>
+            <Navbar
+                title="Dream Island"
+                btnprenotazioni="Prenotazioni"
+                btncamere="Camere"
+                btnservizi="Servizi"
+            />
             <Container>
                 <Typography component="animate" variant="h3">
                     Yatch

@@ -12,10 +12,10 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import ButtonGroup from '@mui/material/ButtonGroup';
 
-const pages = ['Trasporto', 'Camere', 'Servizi'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -38,12 +38,12 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth={true} sx={{backgroundColor:'rgba(254,189,89)'}}>
+      <Container maxWidth={true} sx={{ backgroundColor: 'rgba(154,205,50)' }}>
         <Toolbar disableGutters>
-            <Image src="/images/logo.png" 
-                    alt=""
-                    width={90}
-                    height={50}
+          <Image src="/images/logo.png"
+            alt=""
+            width={90}
+            height={50}
           />
           <Typography
             variant="h6"
@@ -58,7 +58,7 @@ function ResponsiveAppBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
-              
+
             }}
           >
             Dream Island
@@ -72,7 +72,7 @@ function ResponsiveAppBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-           
+
             >
               <MenuIcon />
             </IconButton>
@@ -94,14 +94,14 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <ButtonGroup variant='' sx={{ border: "0px" }}>
+                <Button href='/servizi'>Servizi</Button>
+                <Button href='/camere'>Camere</Button>
+                <Button href='/trasporti'>Trasporto</Button>
+              </ButtonGroup>
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+
           <Typography
             variant="h5"
             noWrap
@@ -116,21 +116,17 @@ function ResponsiveAppBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
-             
+
             }}
           >
             Dream Island
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+            <ButtonGroup variant='' sx={{ border: "0px" }}>
+              <Button href='/servizi'>Servizi</Button>
+              <Button href='/camere'>Camere</Button>
+              <Button href='/trasporti'>Trasporto</Button>
+            </ButtonGroup>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -155,11 +151,15 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+             
+                <MenuItem  onClick={handleCloseUserMenu}>
+                  <ButtonGroup variant='' sx={{ border: "0px" }}>
+                    <Button href='/account'>Account</Button>
+                    <Button href='/'>DashBoard</Button>
+                    <Button href='/'>Logout</Button>
+                  </ButtonGroup>
                 </MenuItem>
-              ))}
+              
             </Menu>
           </Box>
         </Toolbar>
