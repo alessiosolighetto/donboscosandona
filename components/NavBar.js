@@ -95,8 +95,8 @@ function ResponsiveAppBar() {
               }}
             >
               <ButtonGroup variant='' sx={{ border: "0px" }}>
-                <Button href='/servizi'>Attività</Button>
-                <Button href='/camere'>Resort</Button>
+                <Button href='/attivita'>Attività</Button>
+                <Button href='/resort'>Resort</Button>
                 <Button href='/trasporti'>Trasporto</Button>
               </ButtonGroup>
             </Menu>
@@ -123,8 +123,8 @@ function ResponsiveAppBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <ButtonGroup variant='' sx={{ border: "0px" }}>
-              <Button href='/servizi'>Attività</Button>
-              <Button href='/camere'>Resort</Button>
+              <Button href='/attivita'>Attività</Button>
+              <Button href='/resort'>Resort</Button>
               <Button href='/trasporti'>Trasporto</Button>
             </ButtonGroup>
           </Box>

@@ -11,6 +11,7 @@ import PostInEvidenza from '/components/PostInEvidenza'
 import Products from '/components/Products'
 import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
+import Footer from '/components/Footer'
 import Post from '/components/Post'
 import Certifications from '@/components/Certifications'
 import Maps from '/components/Maps'
@@ -19,12 +20,30 @@ import MyCarousel from "@/components/Carousel"
 import { margin } from "@mui/system"
 
 
-const styles = {
-    backgroundImage: "url('/images/sfondo1.jpg')",
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center',
-  };
+let socials = [
+    { title: 'Facebook', imageUrl: 'https://i.ibb.co/jw7JjHZ/facebook.png', url: '...' },
+    { title: 'Instagram', imageUrl: 'https://i.ibb.co/kQ3DfnF/instagram.png', url: '...' },
+    { title: 'Youtube', imageUrl: 'https://i.ibb.co/5Y0WfM1/youtube.png'},
+    { title: 'Linkedin', imageUrl: 'https://i.ibb.co/YQkmRZ1/linkedin.png', url: '...' },
+]
+
+let images = [
+    { title: 'Servizi', imageUrl: 'https...', url: '...' },
+    { title: 'Camere', imageUrl: 'https...', url: '/camere' },
+    { title: 'Servizi', imageUrl: '', url: '/servizi' },
+]
+
+let menu = [
+    { title: 'ACCOUNT', url: '/account' },
+    { title: 'PRESENTATION', url: '/energie' },
+    { title: 'DISCOVER', url: '/elettrico' },
+    { title: 'PAYMENT', url: '/meccanico' },
+    { title: 'CONTACT US', url: '/motoristico' },
+]
+
+
+
+
 
 let trasporti = [
     {
@@ -54,7 +73,7 @@ let trasporti = [
 export default function Home() {
     return (
         <Layout>
-            <div style={styles}>
+            
             <Navbar
                 title="Dream Island"
                 btnprenotazioni="Prenotazioni"
@@ -73,11 +92,24 @@ export default function Home() {
                 marginBottom:"100px",
             }}>
         
-            <Typography variant="body2" color="rgba(70, 70, 70, 1)" margin={5}> 
-            In conclusione, se sei alla ricerca di un'esperienza di soggiorno di lusso, le suite sono sicuramente la scelta giusta per te. A seconda del livello di esclusività che cerchi, puoi optare per una suite standard, luxury, premium o best. Qualunque sia la tua scelta, sono sicuro che non rimarrai deluso dalla tua esperienza di soggiorno di lusso.
-            </Typography>
+           
             </Container>
-            </div>
+            
+
+            <Footer
+                imageUrl="https://immagine di sfondo"
+                color="#777"
+                opacity={1}
+                title1="Sviluppatori"
+                description1="Solighetto Alessio - Solighetto Daniel - Barbaric Elia - Alberti Lorenzo"
+                title2="Social Feed"
+                socials={socials}
+                title3="I Settori"
+                images={images}
+                menu={menu}
+                copyright="Copyright (C) 2023 9dreams Agency."
+            />
+
         </Layout>
     )
 }

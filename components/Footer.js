@@ -60,17 +60,7 @@ export default function Footer(props) {
               {props.title3}
             </Typography>
             <Grid container spacing={2}>
-              {props.images.map((image) => (
-                <Grid item xs={4} key={image.title}>
-                  <Link href={image.url}>
-                    <img
-                      src={image.imageUrl}
-                      alt={image.title}
-                      width="100%"
-                    />
-                  </Link>
-                </Grid>
-              ))}
+              
             </Grid>
           </Grid>
           <Grid item xs={12}>

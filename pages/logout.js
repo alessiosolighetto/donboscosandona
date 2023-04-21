@@ -10,7 +10,7 @@ export default function Logout() {
 
       sessionStorage.setItem('isAuthenticated', false);
       router.push('/');
-    }, 2000);
+    }, 1500);
   }, []);
 
   return (

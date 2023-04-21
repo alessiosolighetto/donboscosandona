@@ -65,45 +65,7 @@ let settori = [
 ]
 
 
-let men = [
-    {
-        title: "Regular",
-        description: "Prova il nostro fantastico menù 'Regular'.",
-        immagineUrl: "/images/pane1.jpg",
-        url: "/pane"
-    },
-    {
-        title: "Large",
-        description: "Prova il nostro fantastico menù 'Large'.",
-        immagineUrl: "/images/Pane2.jpg",
-        url: "/pane"
-    },
-    {
-        title: "The Biggest",
-        description: "Prova il nostro fantastico menù 'The Biggest'.",
-        immagineUrl: "/images/pane3.jpg",
-        url: "/pane"
-    },
-    {
-        title: "Asporto",
-        description: "Prova il nostro fantastico menù 'D'asporto'.",
-        immagineUrl: "/images/pane4.jpg",
-        url: "/pane"
-    },
-    {
-        title: "Vegano",
-        description: "Prova il nostro fantastico menù 'Vegano'.",
-        immagineUrl: "/images/pane5.jpg",
-        url: "/pane"
-    },
-    {
-        title: "Pollo",
-        description: "Prova il nostro fantastico menù 'Pollo'.",
-        immagineUrl: "/images/pane6.jpg",
-        url: "/pane"
-    },
 
-]
 
 
 let camere = [
@@ -185,18 +147,14 @@ export default function Home() {
             />
 
             <MyCarousel slides={immaginiparco} />
-            <Products
-                title="Il Nostro Menù"
-                description="Scopri cosa mangiare"
-                cardWidth={4}
-                products={men}
-            />
+            
             <center>
 
             <Paper elevation={10}
             sx={{
-                width:"700px",
-                borderRadius:"30px"
+                width:"60%",
+                borderRadius:"30px",
+                marginTop:"100px"
             }}>
                 
                     <Typography variant='h4' fontFamily="monospace">
@@ -223,8 +181,6 @@ export default function Home() {
                     <Typography variant='h6' margin={1} fontFamily="monospace">
                        6 anni
                     </Typography>
-                    
-                
             </Paper>
             </center>
             <br/>
@@ -265,10 +221,10 @@ export default function Home() {
                 opacity={1}
                 title1="Sviluppatori"
                 description1="Solighetto Alessio - Solighetto Daniel - Barbaric Elia - Alberti Lorenzo"
-                title2="Social Feed"
+                title2="I nostri Social"
                 socials={socials}
-                title3="I Settori"
-                images={images}
+                
+                
                 menu={menu}
                 copyright="Copyright (C) 2023 9dreams Agency."
             />
