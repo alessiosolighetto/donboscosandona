@@ -38,7 +38,7 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth={true} sx={{ backgroundColor: 'rgba(154,205,50)' }}>
+      <Container maxWidth={true} sx={{ backgroundColor: 'rgb(25, 118, 215)' }}>
         <Toolbar disableGutters>
           <Image src="/images/logo.png"
             alt=""
@@ -95,8 +95,8 @@ function ResponsiveAppBar() {
               }}
             >
               <ButtonGroup variant='' sx={{ border: "0px" }}>
-                <Button href='/servizi'>Servizi</Button>
-                <Button href='/camere'>Camere</Button>
+                <Button href='/servizi'>Attività</Button>
+                <Button href='/camere'>Resort</Button>
                 <Button href='/trasporti'>Trasporto</Button>
               </ButtonGroup>
             </Menu>
@@ -123,8 +123,8 @@ function ResponsiveAppBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <ButtonGroup variant='' sx={{ border: "0px" }}>
-              <Button href='/servizi'>Servizi</Button>
-              <Button href='/camere'>Camere</Button>
+              <Button href='/servizi'>Attività</Button>
+              <Button href='/camere'>Resort</Button>
               <Button href='/trasporti'>Trasporto</Button>
             </ButtonGroup>
           </Box>
@@ -151,15 +151,15 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-             
-                <MenuItem  onClick={handleCloseUserMenu}>
-                  <ButtonGroup variant='' sx={{ border: "0px" }}>
-                    <Button href='/account'>Account</Button>
-                    <Button href='/paginaprenotazione'>Prenota</Button>
-                    <Button href='/'>Logout</Button>
-                  </ButtonGroup>
-                </MenuItem>
-              
+
+              <MenuItem onClick={handleCloseUserMenu}>
+                <ButtonGroup variant='' sx={{ border: "0px" }}>
+                  <Button href='/account'>Account</Button>
+                  <Button href='/paginaprenotazione'>Prenota</Button>
+                  <Button href='/logout'>Logout</Button>
+                </ButtonGroup>
+              </MenuItem>
+
             </Menu>
           </Box>
         </Toolbar>

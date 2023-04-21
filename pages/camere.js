@@ -18,6 +18,15 @@ import Navbar from "@/components/NavBar"
 import MyCarousel from "@/components/Carousel"
 import { margin } from "@mui/system"
 
+
+const styles = {
+    backgroundImage: "url('/images/sfondo1.jpg')",
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center center',
+  };
+
+
 let camere = [
     {
         title: "Suite",
@@ -56,6 +65,7 @@ let camere = [
 export default function Camere() {
     return (
         <Layout>
+            <div style={styles}>
             <Navbar
                 title="Dream Island"
                 btnprenotazioni="Prenotazioni"
@@ -70,6 +80,7 @@ export default function Camere() {
                 cardWidth={6}
                 products={camere}
             />
+            </div>
 
         </Layout>
 

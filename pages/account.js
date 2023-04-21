@@ -20,9 +20,9 @@ export default function Account() {
                 <Paper elevation={24} sx={{
                     margin: "20px",
                     borderRadius: "50px",
-                    width: "50%"
+                    minWidth: "50%", maxWidth:"70%"
                 }}>
-                    <Typography variant="h4" sx={{ padding: 4 }}><center> € 30.500.620 </center></Typography>
+                    <Typography variant="h4" sx={{ padding: 4 }}><center> € 735.528 </center></Typography>
                 </Paper>
                 <br />
                 <br />
@@ -30,9 +30,9 @@ export default function Account() {
                 <Typography variant="h5" sx={{ padding: 4, color: "green" }}> CONGRATULAZIONI! HAI ACCOMULATO UNO SCONTO DI</Typography>
                 <Paper elevation={24} sx={{
                     margin: "20px",
-                    borderRadius: "50px", width: "50%"
+                    borderRadius: "50px", minWidth: "50%", maxWidth:"70%"
                 }}>
-                    <Typography variant="h4" sx={{ padding: 4 }}> <center> € 1.000.000 </center></Typography>
+                    <Typography variant="h4" sx={{ padding: 4 }}> <center> € 5.230</center></Typography>
 
                 </Paper>
             </center>

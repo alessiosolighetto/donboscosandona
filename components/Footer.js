@@ -1,135 +1,111 @@
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
-import Link from '@mui/material/Link'
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
-import Toolbar from '@mui/material/Toolbar'
-import Button from '@mui/material/Button'
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
 
 export default function Footer(props) {
-    return (
-        <Container
-            maxWidth={true}
-            disableGutters={true}
-        >
-            <Box
-                sx={{
-                    position: 'relative',
-                    top: 0,
-                    bottom: 0,
-                    right: 0,
-                    left: 0,
-                    backgroundColor: props.color,
-                }}
-            >
-                <Container maxWidth="lg">
-                    <Grid container spacing={3}>
-                        { /* Chi siamo */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" paddingBottom="2rem">
-                                {props.title1}
-                            </Typography>
-                            <Typography component="h5" color="darkgrey" paragraph>
-                                {props.description1}
-                            </Typography>
-                        </Grid>
-
-                        { /* Social Feed */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" paddingBottom="2rem">
-                                {props.title2}
-                            </Typography>
-                            <Typography component="h1" color="White" >
-                                {
-                                    props.socials.map((social) => (
-                                        <Container sx={{ padding: "0.5rem" }}>
-                                            <Link
-                                                color="inherit"
-                                                noWrap
-                                                key={social.title}
-
-                                                variant="body2"
-                                                href={social.url}
-                                                sx={{ p: 1, flexShrink: 0, }}
-                                            >
-                                                <img src={social.imageUrl} width="20" />
-                                                {social.title}
-                                            </Link>
-                                        </Container>
-                                    ))
-                                }
-                            </Typography>
-                        </Grid>
-
-                        { /* Immagini */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" paddingBottom="2rem">
-                                {props.title3}
-                            </Typography>
-                            <Grid container spacing={2} minHeight={160}>
-                                {
-                                    props.images.map((image) => (
-                                        <Grid item xs={4} display="flex" justifyContent="center" alignItems="center">
-                                            <Link
-                                                color="inherit"
-                                                noWrap
-                                                variant="body2"
-                                                sx={{ p: 1, flexShrink: 3, }}
-                                            >
-                                                <img src={image.imageUrl} width="120" />
-                                            </Link>
-                                        </Grid>
-                                    ))
-                                }
-                            </Grid>
-                        </Grid>
-
-                        { /* Linea */}
-                        <Grid item xs={12}>
-                            <Typography component="h1">
-                                <hr />
-                            </Typography>
-                        </Grid>
-
-                        { /* Menù */}
-                        <Grid item xs={12} lg={8}>
-                            <Toolbar
-                                component="nav"
-                                variant="dense"
-                                sx={{
-                                    overflowX: 'auto',
-                                    float: 'right',
-                                    color: '#fff',
-                                }}
-                            >
-                                <Grid container sx={{ marginBottom: '10px', pb: '10px'}}>
-                                    {
-                                        props.menu.map((link) => (
-                                            <Button
-                                                color="inherit"
-                                                noWrap
-                                                key={link.title}
-                                                variant="body2"
-                                                href={link.url}
-                                                sx={{ p: 1, flexShrink: 0, marginRight: '20px' }}
-                                            >
-                                                {link.title}
-                                            </Button>
-                                        ))
-                                    }
-                                </Grid>
-                            </Toolbar>
-                        </Grid>
-
-                        { /* Copyright */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" sx={{marginLeft: '27px', marginBottom: '15px'}}>
-                                {props.copyright}
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                </Container>
+  return (
+    <Box
+      sx={{
+        backgroundColor: props.color,
+        color: 'white',
+        pt: 10,
+        pb: 5,
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={4}>
+            <Typography variant="h5" sx={{ mb: 3 }}>
+              {props.title1}
+            </Typography>
+            <Typography variant="body2" sx={{ mb: 2 }}>
+              {props.description1}
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Typography variant="h5" sx={{ mb: 3 }}>
+              {props.title2}
+            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              {props.socials.map((social) => (
+                <Box
+                  key={social.title}
+                  sx={{ display: 'flex', alignItems: 'center', mr: 2 }}
+                >
+                  <Link href={social.url}>
+                    <img
+                      src={social.imageUrl}
+                      alt={social.title}
+                      width="20"
+                      sx={{ mr: 1 }}
+                    />
+                  </Link>
+                  <Link
+                    href={social.url}
+                    variant="body2"
+                    sx={{ color: 'inherit' }}
+                  >
+                    {social.title}
+                  </Link>
+                </Box>
+              ))}
             </Box>
-        </Container>
-    )
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Typography variant="h5" sx={{ mb: 3 }}>
+              {props.title3}
+            </Typography>
+            <Grid container spacing={2}>
+              {props.images.map((image) => (
+                <Grid item xs={4} key={image.title}>
+                  <Link href={image.url}>
+                    <img
+                      src={image.imageUrl}
+                      alt={image.title}
+                      width="100%"
+                    />
+                  </Link>
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+          <Grid item xs={12}>
+            <hr sx={{ borderColor: 'white' }} />
+          </Grid>
+          <Grid item xs={12}>
+            <Toolbar
+              component="nav"
+              variant="dense"
+              sx={{
+                overflowX: 'auto',
+                color: 'inherit',
+                justifyContent: 'flex-end',
+              }}
+            >
+              {props.menu.map((link) => (
+                <Button
+                  key={link.title}
+                  href={link.url}
+                  variant="text"
+                  sx={{ color: 'inherit', mr: 2 }}
+                >
+                  {link.title}
+                </Button>
+              ))}
+            </Toolbar>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="body2" sx={{ mt: 3 }}>
+              {props.copy}
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
 }
+    

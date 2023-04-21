@@ -19,7 +19,12 @@ import MyCarousel from "@/components/Carousel"
 import { margin } from "@mui/system"
 
 
-
+const styles = {
+    backgroundImage: "url('/images/sfondo1.jpg')",
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center center',
+  };
 
 let trasporti = [
     {
@@ -49,6 +54,7 @@ let trasporti = [
 export default function Home() {
     return (
         <Layout>
+            <div style={styles}>
             <Navbar
                 title="Dream Island"
                 btnprenotazioni="Prenotazioni"
@@ -71,7 +77,7 @@ export default function Home() {
             In conclusione, se sei alla ricerca di un'esperienza di soggiorno di lusso, le suite sono sicuramente la scelta giusta per te. A seconda del livello di esclusività che cerchi, puoi optare per una suite standard, luxury, premium o best. Qualunque sia la tua scelta, sono sicuro che non rimarrai deluso dalla tua esperienza di soggiorno di lusso.
             </Typography>
             </Container>
-            
+            </div>
         </Layout>
     )
 }

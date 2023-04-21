@@ -35,7 +35,7 @@ export default function Elicottero() {
                 </Typography>
                 <Paper elevation={12} sx={{width:"35%"}}>
                 <Typography component="animate" variant="h6" fontFamily={"monospace"}>
-                    1.500.000 €
+                     € 15.000
                 </Typography>
                 </Paper>
                 <br/><br/>
@@ -44,7 +44,7 @@ export default function Elicottero() {
                 </Typography>
                 <Paper elevation={12} sx={{width:"35%"}}>
                 <Typography component="animate" variant="h6" fontFamily={"monospace"}>
-                    2.700.000 €
+                € 27.000
                 </Typography>
                 </Paper>
                 <br/><br/>
@@ -53,7 +53,7 @@ export default function Elicottero() {
                 </Typography>
                 <Paper elevation={12} sx={{width:"35%"}}>
                 <Typography component="animate" variant="h6" fontFamily={"monospace"}>
-                   3.500.000
+                € 35.000
                 </Typography>
                 </Paper>
                 <br/><br/>

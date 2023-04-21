@@ -1,8 +1,8 @@
 import Logos from '/components/Logos'
 import Footer from '/components/Footer'
 
-export const siteName = "CFP DON BOSCO"
-export const siteTitle = "CFP DON BOSCO - San Donà di Piave"
+export const siteName = "Dreams Island"
+export const siteTitle = "Dream Island"
 export const siteDescription = "Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave"
 
 export const menu = [
