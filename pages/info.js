@@ -133,7 +133,7 @@ let menu = [
 ]
 
 
-export default function Home() {
+export default function Info() {
     return (
         <Layout sitetitle="dreams">
             <div style={styles}>
@@ -146,55 +146,44 @@ export default function Home() {
                 btnservizi="Servizi"
             />
 
-            <MyCarousel slides={immaginiparco} />
-            
-           
-            <br/>
-            <br/>
-            <br/>
-            <Products
-                title="Tour Dell'isola"
-                x description="Ecco i modi con cui puoi fare un tour dell'isola"
-                cardWidth={6}
-                products={tour}
-            />
-            <Typography  variant='h2'>
-                fare una parte dove si spiegano le varie attrazioni del parco ed inserirla qui
-            </Typography> 
-            <Container sx={{
-                marginTop: "60px",
-                marginBottom: "100px",
-            }}>
-                
-                <Products
-                    title="Scegli dove alloggiare durante la visita del Parco"
-                    description="SCEGLI LA CAMERA CHE TI PIACE DI PIU' E PRENOTA ORA"
-                    cardWidth={3}
-                    products={camere}
-                />
-                <Products
-                    title=" Trasporto"
-                    x description="Scegli come arrivare sull'isola"
-                    cardWidth={6}
-                    products={settori}
-                />
-                
-            </Container>
-            <Container sx={{display:"flex"}}>
-                <Typography sx={{paddingTop:"5px"}}>
-                    Clicca per andare alla pagina: info e prenotazioni
-                </Typography>
-                <Button href='info'>
-                    info
-                </Button> 
-                <Typography sx={{paddingTop:"5px"}}>
-                    e
-                </Typography>
-                <Button href='paginaprenotazione'>
-                    prenotazioni
-                </Button>
-            </Container>
+<center>
 
+<Paper elevation={10}
+sx={{
+    width:"60%",
+    borderRadius:"30px",
+    marginTop:"100px"
+}}>
+    
+        <Typography variant='h4' fontFamily="monospace">
+            Info per entrare nel parco
+        </Typography>
+    
+    <hr/>
+    
+        <Typography variant='h4' margin={3} fontFamily="monospace">
+           Prezzi:
+        </Typography>
+        <Typography variant='h6' margin={1} fontFamily="monospace">
+           Bambino: 25€
+        </Typography>
+        <Typography variant='h6' margin={1} fontFamily="monospace">
+           Ragazzo: 35€
+        </Typography>
+        <Typography variant='h6' margin={1} fontFamily="monospace">
+           Adulto: 50€
+        </Typography>
+        <Typography variant='h4' margin={3} fontFamily="monospace">
+           Età minima
+        </Typography>
+        <Typography variant='h6' margin={1} fontFamily="monospace">
+           6 anni
+        </Typography>
+</Paper>
+</center>
+<br/>
+<br/>
+<br/>
             <Footer
                 imageUrl="https://immagine di sfondo"
                 color="#777"

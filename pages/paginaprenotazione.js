@@ -33,7 +33,7 @@ import FormLabel from '@mui/material/FormLabel';
 let socials = [
     { title: 'Facebook', imageUrl: 'https://i.ibb.co/jw7JjHZ/facebook.png', url: '...' },
     { title: 'Instagram', imageUrl: 'https://i.ibb.co/kQ3DfnF/instagram.png', url: '...' },
-    { title: 'Youtube', imageUrl: 'https://i.ibb.co/5Y0WfM1/youtube.png'},
+    { title: 'Youtube', imageUrl: 'https://i.ibb.co/5Y0WfM1/youtube.png' },
     { title: 'Linkedin', imageUrl: 'https://i.ibb.co/YQkmRZ1/linkedin.png', url: '...' },
 ]
 
@@ -55,51 +55,49 @@ let menu = [
 export default function PaginaPrenotazione() {
     return (
         <Layout>
-            <Navbar />
-            <Container>
-                <center>
-
-                    <Typography variant='h3' marginTop={5} fontFamily="monospace">
-                        Prenota la tua vacanza
-                    </Typography>
-                </center>
-            </Container>
-            <Container>
-                <CheckInOutForm /> <br /><br />
-                <center>
-                    <Typography variant='h3' margin={0} fontFamily="monospace">
-                        Numero Persone
-                    </Typography>
-                </center>
-
-                <br />
+            <Navbar
+                title="Dream Island"
+                btnprenotazioni="Prenotazioni"
+                btncamere="Camere"
+                btnservizi="Servizi"
+            />
+            <Container maxWidth={false} sx={{ height: "80vh", padding: "50px" }}>
+                <Typography>
+                    inserire la data di check in
+                </Typography>
+                <input type="date" />
+                <Typography sx={{ marginTop: "50px" }}>
+                    inserire la data di check out
+                </Typography>
+                <input type="date" />
+                <Typography sx={{ marginTop: "80px" }}>
+                    inserire il numero di adulti 18+
+                </Typography>
                 <input type="number" />
-                <br /><br /><br /><br />
-                <center>
-                    <Typography variant='h3' margin={0} fontFamily="monospace">
-                        Scegli il Mezzo per raggiungere l'Isola
-                    </Typography>
-                </center>
-
-                <br />
-                <FormControl>
-
+                <Typography sx={{ marginTop: "20px" }}>
+                    inserire il numero di ragazzi 13-18
+                </Typography>
+                <input type="number" />
+                <Typography sx={{ marginTop: "20px" }}>
+                    inserire il numero di bambini 0-13
+                </Typography>
+                <input type="number" /> <br />
+                <FormControl sx={{marginTop:"70px"}}>
+                    <FormLabel id="demo-radio-buttons-group-label">Mezzo di trasporto</FormLabel>
                     <RadioGroup
                         aria-labelledby="demo-radio-buttons-group-label"
-                        defaultValue="Yatch"
+                        defaultValue="elicottero2"
                         name="radio-buttons-group"
                     >
-                        <FormControlLabel value="Yatch" control={<Radio />} label="Yatch" />
-                        <FormControlLabel value="Elicottero" control={<Radio />} label="Elicottero" />
-                        <FormControlLabel value="Idrovolante" control={<Radio />} label="Idrovolante" />
+                        <FormControlLabel value="elicottero2" control={<Radio />} label="Elicottero 2" />
+                        <FormControlLabel value="elicotterolux" control={<Radio />} label="Elicottero " />
+                        
                     </RadioGroup>
                 </FormControl>
-            </Container>
-            <center>
-                <Button variant="contained" color="success" sx={{ width: "80%", borderRadius: "10px", marginTop: "100px", height: "40px" }}>
-                    Prenota ORA
+                <Button color='success' fullWidth sx={{ height: "50px", marginTop: "40px" }}>
+                    Prenota ora
                 </Button>
-            </center>
+            </Container>
 
             <Footer
                 imageUrl="https://immagine di sfondo"

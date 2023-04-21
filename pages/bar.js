@@ -27,37 +27,55 @@ let men = [
         title: "Regular",
         description: "Prova il nostro fantastico menù 'Regular'.",
         immagineUrl: "/images/pane1.jpg",
-        url: "/pane"
+        url: "/"
     },
     {
         title: "Large",
         description: "Prova il nostro fantastico menù 'Large'.",
         immagineUrl: "/images/Pane2.jpg",
-        url: "/pane"
+        url: "/"
     },
     {
         title: "The Biggest",
         description: "Prova il nostro fantastico menù 'The Biggest'.",
         immagineUrl: "/images/pane3.jpg",
-        url: "/pane"
+        url: "/"
     },
     {
         title: "Asporto",
         description: "Prova il nostro fantastico menù 'D'asporto'.",
         immagineUrl: "/images/pane4.jpg",
-        url: "/pane"
+        url: "/"
     },
     {
         title: "Vegano",
         description: "Prova il nostro fantastico menù 'Vegano'.",
         immagineUrl: "/images/pane5.jpg",
-        url: "/pane"
+        url: "/"
     },
     {
         title: "Pollo",
         description: "Prova il nostro fantastico menù 'Pollo'.",
         immagineUrl: "/images/pane6.jpg",
-        url: "/pane"
+        url: "/"
+    },
+    {
+        title: "Coca Cola",
+        description: "",
+        immagineUrl: "https://www.horeca.live/shop/5119-large_default/coca-cola-vap-33-cl-vetro.jpg",
+        url: "/"
+    },
+    {
+        title: "Sprite",
+        description: "",
+        immagineUrl: "https://cdn1.marcocusano.cloud/D936542D/products/77-c4ca4238a0b923820dcc509a6f75849b",
+        url: "/"
+    },
+    {
+        title: "Acqua",
+        description: "",
+        immagineUrl: "https://www.moar.it/14373-thickbox_default/ACQUA-NATURALE-BOTTIGLIA-PET-1LT-SAN-BENEDETTO-COD-SBAN1-CONFEZIONE-DA-12.jpg",
+        url: "/"
     },
 
 ]
@@ -65,15 +83,18 @@ let men = [
 export default function Bar() {
     return (
         <Layout>
-           <Navbar
-                    title="Dream Island"
-                    btnprenotazioni="Prenotazioni"
-                    btncamere="Camere"
-                    btnservizi="Servizi"
-                />
-            <Typography variant="h3" margin={3}>
-                Bar
-            </Typography>  
+            <Navbar
+                title="Dream Island"
+                btnprenotazioni="Prenotazioni"
+                btncamere="Camere"
+                btnservizi="Servizi"
+            />
+            <center>
+                <Typography variant="h5" margin={3}>
+                    Scegli e clicca per ordinare, te lo porteremo in meno di 5 minuti !
+                </Typography>
+            </center>
+
             <Products
                 title="Il Nostro Menù"
                 description="Scopri cosa mangiare"
